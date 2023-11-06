@@ -1,4 +1,14 @@
+import java.awt.*;
+import java.util.*;
+
 public class Polygon {
+
+    public Polygon() {
+
+    }
+    public ArrayList<Polygon> polygonList;
+    String name;
+    Point centerPoint;
     /*
 
     TODO: For each step below, named STEP 1..5, do the following:
@@ -9,16 +19,7 @@ public class Polygon {
       c) assert: You should not have touched the code before reaching this point.
          Don't proceed unless you've drawn the diagrams.
       d) When, and only when, you've drawn the diagrams: Refactor the code as specified.
-      .
-      .
-      (You can choose in which order to do things, as long as you don't touch the code *before*
-      drawing the relevant diagrams. I.e. you could choose to do
-           0a ... 5a, then 0b ... 5b, and then 0d ... 5d
-        OR 0a + 0b, ..., 5a + 5b, then 0d ... 5d
-        OR 0a + 0b + 0d, ..., 5a + 5b + 5d
-      Any of these orders is fine, as long as you never do Xd before you've done both Xa and Xb.)
-      .
-      .
+
       STEP 0: * The system as it looks right now, before any refactoring steps (and without this
                 Polygon file).
       STEP 1: * Create a new class Polygon (this file) to hold the variables name and centerPoint
