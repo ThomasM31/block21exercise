@@ -12,12 +12,12 @@ public class Polygon {
 
     }
     public void paint(Graphics g) {
-        String name = this.name;
-        if (name == "square") {
+        Point currentCenter = this.centerPoint;
+        if (this.name.equals("square")) {
             this.paintSquare(g); }
-        else if (name == "triangle") {
+        else if (this.name.equals("triangle")) {
             this.paintTriangle(g);}
-        else;
+        else if (this.name.equals("rectangle"));
             this.paintRectangle(g);
             }
 
