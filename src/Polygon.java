@@ -2,8 +2,8 @@ import java.awt.*;
 import java.util.*;
 
 public class Polygon {
-    private String name;
-    private Point centerPoint;
+    public String name;
+    public Point centerPoint;
 
     public Polygon(String str, Point p) {
         name = str;

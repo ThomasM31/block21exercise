@@ -3,51 +3,35 @@ import java.awt.*;
 import java.util.*;
 
 public class DrawPolygons extends Component{
-    // private ArrayList<String> polygonNames;
-    // private ArrayList<Point>  centerPoints;
-    private ArrayList<Polygon> polygonList;
+    private ArrayList<Polygon> polygons;
 
     public DrawPolygons(){
-        polygonList = new ArrayList<>(10);
-        // polygonNames = new ArrayList<>(10);
-        // centerPoints = new ArrayList<>(10);
+        polygons = new ArrayList<>();
 
         Polygon p1 = new Polygon("square",new Point(100,100));
         Polygon p2 = new Polygon("triangle",new Point(150,150));
         Polygon p3 = new Polygon("rectangle",new Point(100,200));
 
-        polygonList.add(p1);
-        polygonList.add(p2);
-        polygonList.add(p3);
-
-        /*
-        polygonNames.add("square");
-        polygonNames.add("triangle");
-        polygonNames.add("rectangle");
-        centerPoints.add(new Point(100,100));
-        centerPoints.add(new Point(150,150));
-        centerPoints.add(new Point(100,200));
-        *\
-
-         */
+        polygons.add(p1);
+        polygons.add(p2);
+        polygons.add(p3);
     }//constructor
 
     @Override
     public void paint(Graphics g) {
-        for (int i = 0; i < polygonNames.size(); i++) {
-            String currentPolygon = polygonNames.get(i);
-            Point currentCenter = centerPoints.get(i);
+        for (int i = 0; i < polygons.size(); i++) {
+            Polygon currentPolygon = polygons.get(i);
             if (currentPolygon.equals("square"))
-                g.drawRect(currentCenter.x -10, currentCenter.y -10, 20, 20);
+                g.drawRect(currentPolygon.centerPoint.x -10, currentPolygon.centerPoint.y -10, 20, 20);
             else if (currentPolygon.equals("triangle")) {
-                g.drawLine(currentCenter.x, currentCenter.y-10, currentCenter.x-10,
-                        currentCenter.y+10);
-                g.drawLine(currentCenter.x-10, currentCenter.y+10,
-                        currentCenter.x+10, currentCenter.y+10);
-                g.drawLine(currentCenter.x+10, currentCenter.y+10, currentCenter.x,
-                        currentCenter.y-10);
+                g.drawLine(currentPolygon.centerPoint.x, currentPolygon.centerPoint.y-10, currentPolygon.centerPoint.x-10,
+                        currentPolygon.centerPoint.y+10);
+                g.drawLine(currentPolygon.centerPoint.x-10, currentPolygon.centerPoint.y+10,
+                        currentPolygon.centerPoint.x+10, currentPolygon.centerPoint.y+10);
+                g.drawLine(currentPolygon.centerPoint.x+10, currentPolygon.centerPoint.y+10, currentPolygon.centerPoint.x,
+                        currentPolygon.centerPoint.y-10);
             } else if (currentPolygon.equals("rectangle"))
-                g.drawRect(currentCenter.x -20, currentCenter.y -10, 40, 20);
+                g.drawRect(currentPolygon.centerPoint.x -20, currentPolygon.centerPoint.y -10, 40, 20);
         }
     }//paint
 
