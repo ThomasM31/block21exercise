@@ -19,9 +19,14 @@ public class DrawPolygons extends Component {
 
     public void paint(Graphics g) {
         for (Polygon currentPolygon : polygons){
-            currentPolygon.paint(g);
+            String name = currentPolygon.name;
+            if (name == "square") {
+                currentPolygon.paintSquare(g); }
+            else if (name == "triangle") {
+                currentPolygon.paintTriangle(g);}
+            else;
+                currentPolygon.paintRectangle(g);
         }
-    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();

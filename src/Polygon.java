@@ -11,22 +11,21 @@ public class Polygon {
         centerPoint = p;
 
     }
-    public void paint(Graphics g) {
-        Point currentCenter = this.centerPoint;
+    public void paintSquare(Graphics g) {
+        g.drawRect(this.centerPoint.x -10, this.centerPoint.y -10, 20, 20);
+    }
+    public void paintTriangle(Graphics g) {
+        g.drawLine(this.centerPoint.x, this.centerPoint.y-10, this.centerPoint.x-10,
+                this.centerPoint.y+10);
+        g.drawLine(this.centerPoint.x-10, this.centerPoint.y+10,
+                this.centerPoint.x+10, this.centerPoint.y+10);
+        g.drawLine(this.centerPoint.x+10, this.centerPoint.y+10, this.centerPoint.x,
+                this.centerPoint.y-10);
+    }
+    public void paintRectangle(Graphics g) {
+        g.drawRect(this.centerPoint.x -20, this.centerPoint.y -10, 40, 20);
+    }
 
-            if (this.name.equals("square"))
-                g.drawRect(currentCenter.x -10, currentCenter.y -10, 20, 20);
-            else if (equals("triangle")) {
-                g.drawLine(currentCenter.x, currentCenter.y-10, currentCenter.x-10,
-                        currentCenter.y+10);
-                g.drawLine(currentCenter.x-10, currentCenter.y+10,
-                        currentCenter.x+10, currentCenter.y+10);
-                g.drawLine(currentCenter.x+10, currentCenter.y+10, currentCenter.x,
-                        currentCenter.y-10);
-            } else if (equals("rectangle"))
-                g.drawRect(currentCenter.x -20, currentCenter.y -10, 40, 20);
-
-    }//paint
     /*
 
     TODO: For each step below, named STEP 1..5, do the following:
