@@ -2,13 +2,14 @@ import java.awt.*;
 import java.util.*;
 
 public class Polygon {
+    private String name;
+    private Point centerPoint;
 
-    public Polygon() {
+    public Polygon(String str, Point p) {
+        name = str;
+        centerPoint = p;
 
     }
-    public ArrayList<Polygon> polygonList;
-    String name;
-    Point centerPoint;
     /*
 
     TODO: For each step below, named STEP 1..5, do the following:

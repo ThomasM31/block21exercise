@@ -3,18 +3,33 @@ import java.awt.*;
 import java.util.*;
 
 public class DrawPolygons extends Component{
-    private ArrayList<String> polygonNames;
-    private ArrayList<Point>  centerPoints;
+    // private ArrayList<String> polygonNames;
+    // private ArrayList<Point>  centerPoints;
+    private ArrayList<Polygon> polygonList;
 
     public DrawPolygons(){
-        polygonNames = new ArrayList<>(10);
-        centerPoints = new ArrayList<>(10);
+        polygonList = new ArrayList<>(10);
+        // polygonNames = new ArrayList<>(10);
+        // centerPoints = new ArrayList<>(10);
+
+        Polygon p1 = new Polygon("square",new Point(100,100));
+        Polygon p2 = new Polygon("triangle",new Point(150,150));
+        Polygon p3 = new Polygon("rectangle",new Point(100,200));
+
+        polygonList.add(p1);
+        polygonList.add(p2);
+        polygonList.add(p3);
+
+        /*
         polygonNames.add("square");
         polygonNames.add("triangle");
         polygonNames.add("rectangle");
         centerPoints.add(new Point(100,100));
         centerPoints.add(new Point(150,150));
         centerPoints.add(new Point(100,200));
+        *\
+
+         */
     }//constructor
 
     @Override
