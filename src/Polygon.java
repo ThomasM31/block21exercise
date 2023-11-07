@@ -15,16 +15,16 @@ public class Polygon {
         Point currentCenter = this.centerPoint;
 
             if (this.name.equals("square"))
-                g.drawRect(centerPoint.x -10, centerPoint.y -10, 20, 20);
+                g.drawRect(currentCenter.x -10, currentCenter.y -10, 20, 20);
             else if (equals("triangle")) {
-                g.drawLine(centerPoint.x, centerPoint.y-10, centerPoint.x-10,
-                        centerPoint.y+10);
-                g.drawLine(centerPoint.x-10, centerPoint.y+10,
-                        centerPoint.x+10, centerPoint.y+10);
-                g.drawLine(centerPoint.x+10, centerPoint.y+10, centerPoint.x,
-                        centerPoint.y-10);
+                g.drawLine(currentCenter.x, currentCenter.y-10, currentCenter.x-10,
+                        currentCenter.y+10);
+                g.drawLine(currentCenter.x-10, currentCenter.y+10,
+                        currentCenter.x+10, currentCenter.y+10);
+                g.drawLine(currentCenter.x+10, currentCenter.y+10, currentCenter.x,
+                        currentCenter.y-10);
             } else if (equals("rectangle"))
-                g.drawRect(centerPoint.x -20, centerPoint.y -10, 40, 20);
+                g.drawRect(currentCenter.x -20, currentCenter.y -10, 40, 20);
         }
     }//paint
     /*
