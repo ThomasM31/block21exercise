@@ -14,26 +14,27 @@ public class Polygon {
     public void paint(Graphics g) {
         Point currentCenter = this.centerPoint;
         if (this.name.equals("square")) {
-            this.paintSquare(g); }
+            this.paintSquare(g,currentCenter); }
         else if (this.name.equals("triangle")) {
-            this.paintTriangle(g);}
+            this.paintTriangle(g,currentCenter);}
         else if (this.name.equals("rectangle"));
-            this.paintRectangle(g);
+            this.paintRectangle(g,currentCenter);
             }
 
-    public void paintSquare(Graphics g) {
-        g.drawRect(this.centerPoint.x -10, this.centerPoint.y -10, 20, 20);
+    private void paintSquare(Graphics g, Point currentCenter) {
+        g.drawRect(currentCenter.x -10, currentCenter.y -10, 20, 20);
     }
-    public void paintTriangle(Graphics g) {
-        g.drawLine(this.centerPoint.x, this.centerPoint.y-10, this.centerPoint.x-10,
-                this.centerPoint.y+10);
-        g.drawLine(this.centerPoint.x-10, this.centerPoint.y+10,
-                this.centerPoint.x+10, this.centerPoint.y+10);
-        g.drawLine(this.centerPoint.x+10, this.centerPoint.y+10, this.centerPoint.x,
-                this.centerPoint.y-10);
+    private void paintTriangle(Graphics g, Point currentCenter) {
+        g.drawLine(currentCenter.x, currentCenter.y-10, currentCenter.x-10,
+                currentCenter.y+10);
+        g.drawLine(currentCenter.x-10, currentCenter.y+10,
+                currentCenter.x+10, currentCenter.y+10);
+        g.drawLine(currentCenter.x+10, currentCenter.y+10, currentCenter.x,
+                currentCenter.y-10);
     }
-    public void paintRectangle(Graphics g) {
-        g.drawRect(this.centerPoint.x -20, this.centerPoint.y -10, 40, 20);
+    private void paintRectangle(Graphics g, Point currentCenter) {
+
+        g.drawRect(currentCenter.x -20, currentCenter.y -10, 40, 20);
     }
 
     /*
