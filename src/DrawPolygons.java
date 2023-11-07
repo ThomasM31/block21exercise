@@ -21,17 +21,18 @@ public class DrawPolygons extends Component{
     public void paint(Graphics g) {
         for (int i = 0; i < polygons.size(); i++) {
             Polygon currentPolygon = polygons.get(i);
+            Point centerPoint = currentPolygon.centerPoint;
             if (currentPolygon.equals("square"))
-                g.drawRect(currentPolygon.centerPoint.x -10, currentPolygon.centerPoint.y -10, 20, 20);
-            else if (currentPolygon.equals("triangle")) {
-                g.drawLine(currentPolygon.centerPoint.x, currentPolygon.centerPoint.y-10, currentPolygon.centerPoint.x-10,
-                        currentPolygon.centerPoint.y+10);
-                g.drawLine(currentPolygon.centerPoint.x-10, currentPolygon.centerPoint.y+10,
-                        currentPolygon.centerPoint.x+10, currentPolygon.centerPoint.y+10);
-                g.drawLine(currentPolygon.centerPoint.x+10, currentPolygon.centerPoint.y+10, currentPolygon.centerPoint.x,
-                        currentPolygon.centerPoint.y-10);
-            } else if (currentPolygon.equals("rectangle"))
-                g.drawRect(currentPolygon.centerPoint.x -20, currentPolygon.centerPoint.y -10, 40, 20);
+                g.drawRect(centerPoint.x -10, centerPoint.y -10, 20, 20);
+            else if (equals("triangle")) {
+                g.drawLine(centerPoint.x, centerPoint.y-10, centerPoint.x-10,
+                        centerPoint.y+10);
+                g.drawLine(centerPoint.x-10, centerPoint.y+10,
+                        centerPoint.x+10, centerPoint.y+10);
+                g.drawLine(centerPoint.x+10, centerPoint.y+10, centerPoint.x,
+                        centerPoint.y-10);
+            } else if (equals("rectangle"))
+                g.drawRect(centerPoint.x -20, centerPoint.y -10, 40, 20);
         }
     }//paint
 
