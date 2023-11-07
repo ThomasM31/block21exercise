@@ -12,13 +12,9 @@ public class Polygon {
 
     }
     public void paint(Graphics g) {
-        ArrayList<Polygon> polygons = new ArrayList<>();
-        DrawPolygons.polygons;
+        Point currentCenter = this.centerPoint;
 
-        for (int i = 0; i < polygons.size(); i++) {
-            Polygon currentPolygon = polygons.get(i);
-            Point centerPoint = currentPolygon.centerPoint;
-            if (currentPolygon.equals("square"))
+            if (this.name.equals("square"))
                 g.drawRect(centerPoint.x -10, centerPoint.y -10, 20, 20);
             else if (equals("triangle")) {
                 g.drawLine(centerPoint.x, centerPoint.y-10, centerPoint.x-10,
