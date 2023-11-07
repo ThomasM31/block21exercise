@@ -19,13 +19,7 @@ public class DrawPolygons extends Component {
 
     public void paint(Graphics g) {
         for (Polygon currentPolygon : polygons){
-            String name = currentPolygon.name;
-            if (name == "square") {
-                currentPolygon.paintSquare(g); }
-            else if (name == "triangle") {
-                currentPolygon.paintTriangle(g);}
-            else;
-                currentPolygon.paintRectangle(g);
+            currentPolygon.paint(g);
         }
 
     public static void main(String[] args) {

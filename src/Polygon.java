@@ -11,6 +11,16 @@ public class Polygon {
         centerPoint = p;
 
     }
+    public void paint(Graphics g) {
+        String name = this.name;
+        if (name == "square") {
+            this.paintSquare(g); }
+        else if (name == "triangle") {
+            this.paintTriangle(g);}
+        else;
+            this.paintRectangle(g);
+            }
+
     public void paintSquare(Graphics g) {
         g.drawRect(this.centerPoint.x -10, this.centerPoint.y -10, 20, 20);
     }
