@@ -17,6 +17,11 @@ public class DrawPolygons extends Component {
         polygons.add(p3);
     }//constructor
 
+    public void paint(Graphics g) {
+        for (Polygon currentPolygon : polygons){
+            currentPolygon.paint(g);
+        }
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
