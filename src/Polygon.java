@@ -25,7 +25,7 @@ public class Polygon {
                         currentCenter.y-10);
             } else if (equals("rectangle"))
                 g.drawRect(currentCenter.x -20, currentCenter.y -10, 40, 20);
-        }
+
     }//paint
     /*
 
